@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PositionElement</title>
+  <style>
+    .container{
+      border: 2px solid black;
+      height: 80vh;
+      width: 80vw;
+      margin: 30px;
+      position: relative;
+    }
+    /*realtive*/
+    /*.item1,.item2{*/
+    /*  position: relative;*/
+    /*  left: 120px;*/
+    /*  top: 120px;*/
+    /*  border: 1px solid black;*/
+    /*  height: 20px;*/
+    /*  width: 20px;*/
+    /*}*/
+
+    /*absolute*/
+    .item1,.item2{
+      border: 1px solid black;
+      height: 20px;
+      width: 20px;
+    }
+    .item1{
+      position: absolute;
+      left: 120px;
+      top: 120px;
+    }
+    .item1{
+      position: fixed;
+      top: 20px;
+    }
+  </style>
+</head>
+<body>
+<!--static: by default -->
+<!--relative: ele position itself acc to original positiom , orignal pos is still occupied-->
+<!--fixed :ele fixs position on body acc to given position-->
+<!--absolute : ele position acc to nearest position ancestor,space become empty-->
+<!--sticky: ele behave as a fixed ele only inside its parent element-->
+<div class="container">ITem 1<div class="container2"><div class="item1">1</div><div class="item2">2</div> </div></div>
+
+
+</body>
+</html>

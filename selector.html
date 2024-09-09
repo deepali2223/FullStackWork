@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    div p{
+      color: black;
+    }
+    p::first-letter{
+      color: black;
+      background-color: #b3d4fc;
+    }
+    p::first-line{
+      color: darkgreen;
+    }
+    p::selection{
+      background-color: tomato;
+      color: yellow;
+    }
+    h2::after{
+      content : "hollaaa";
+      color: #6688ff;
+      font-family: "Britannic Bold";
+    }
+    /*a:link{*/
+    /*  color: tomato;*/
+    /*  text-decoration: none;*/
+    /*}*/
+    /*a:hover{*/
+    /*  color: seagreen;*/
+    /*}*/
+    /*a:visited{*/
+    /*  color: beige;*/
+    /*}*/
+    /*a:active{*/
+    /*  color: #6688ff;*/
+    /*}*/
+
+    /*psuedo element (::)*/
+
+  </style>
+</head>
+<body>
+<p> this is a paragraph,it is called nanosecond.</p>
+<h2>this is a heading.</h2>
+<div>
+  <p>paragrgaph in div</p>
+  <span>spannn</span>
+  <h2>hading</h2>
+  <ul><li>1st</li>2nd<li></li></ul>
+</div>
+<ul>
+  <li><p>pew pew</p></li>
+  <p>out div</p>
+</ul>
+<p>outside</p>
+<h1><a href="https://google.com">click</a> </h1>
+</body>
+</html>
