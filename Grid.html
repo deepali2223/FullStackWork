@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<style>
+  *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
+  .container{
+    display:grid;
+    grid-template-columns: 2fr 3fr 2fr;
+    grid-template-rows:10vh 40vh 40vh 10vh ;
+    border:2px solid red;
+    height: 100vh;
+    gap:4px 4px;
+  }
+  .box{
+    border: 2px solid green;
+  }
+  #navbar{
+    grid-area:1/1/2/4;
+    background-color:gainsboro;
+  }
+  #sidebar{
+    grid-area:2/1/5/2;
+    background-color:gainsboro;
+  }
+  #content{
+    grid-area:2/3/4/4;
+    background-color:gainsboro;
+  }
+  #footer{
+    grid-area:4/2/5/4;
+    background-color:gainsboro;
+  }
+
+</style>
+<body>
+<div class="container">
+  <div class="box" id="navbar">Navbar</div>
+  <div class="box" id="sidebar">box2</div>
+  <div class="box" id="content">box3</div>
+  <div class="box" id="footer">box4</div>
+  <div class="box" id="box5">box5</div>
+  <div class="box" id="box6">
+    <img src="../Class.gif" alt="image">
+    <p>YOU ARE LEARNING GRIDS.This is class 14 of development.4/2/5/4 means that the row start from 4 rth row and enda at 5 th row and column starts from 2and ends at 4</p>
+  </div>
+  <!--    <div class="box" id="box7">box7</div>-->
+  <!--    <div class="box" id="box8">box8</div>-->
+</div>
+
+</body>
+</html>
