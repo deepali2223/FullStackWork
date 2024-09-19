@@ -1,0 +1,79 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid black;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("/img/spaceBck.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.orbit{
+  position: absolute;
+  border: 3px solid grey;
+  height: 450px;
+  width: 450px;
+  border-radius: 50%;
+  animation: rotation 8s linear infinite; 
+}
+.o2{
+  height: 600px;
+  width: 600px;
+  animation: rotation 8s 0.25s linear infinite;
+}
+.o3{
+  height: 800px;
+  width: 800px;
+  animation: rotation 8s 0.5s linear infinite;
+}
+.planet{
+  position: relative;
+  border-radius: 50%;
+  /* border: 1px solid ; */
+  
+}
+.mercury{
+  height: 50px;
+  width: 50px;
+  top: 105px;
+  background-image: url("/img/mercury.jpeg");
+  background-repeat: no-repeat;
+}
+.venus{
+  height: 55px;
+  width: 55px;
+  top: 130px;
+  background-image: url('/img/venus.jpg');
+}
+.earth{
+  height: 70px;
+  width: 70px;
+  top: 180px;
+  background-image: url('/img/earth.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@keyframes rotation{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+.sun{
+  position: fixed;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  /* background-image: radial-gradient(orange 40%,red,yellow ); */
+  background-image: url("/img/sunTRans.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
