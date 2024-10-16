@@ -1,0 +1,400 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none; border:none;
+    text-decoration: none;
+}
+header{
+    /* position: fixed;
+    top:0;left:0;right:0; */
+    background-color: white;
+    padding:2rem 9%;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    z-index: 1000;
+    border-bottom: solid 1px gray;
+    /* box-shadow: 0 0.5rem 1rem rgba(0,0,0,.1); */
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  nav ul li {
+    margin: 0 10px;
+    position: relative;
+  }
+  
+  nav ul li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: -10px;
+    top: 0;
+    height: 100%;
+    border-right: 1px solid grey;
+  }
+  nav ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: lighter;
+    color: black;
+    letter-spacing: 2px;
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+   nav a:hover{
+    color: #B09B07;
+} 
+  nav ul li:last-child a {
+    margin-right: 0;
+  }
+
+  .home{
+    height: 100vh;
+    background: url("https://img.pagecloud.com/7hnOrLYW57XbQ3_XqnxWMT9AeYg=/2100x0/filters:no_upscale()/collections/images/image-ID-b56c6a1d-367d-4c1d-eac3-fb4c3a5d2abb.jpeg") no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .content{
+    position: relative;
+    z-index: 2;
+  }
+  /*For overlay over the background*/
+  .home::before {
+    content: "";
+    position: absolute; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: brightness(0.5);
+    z-index: 1; 
+}
+.home .siteName{
+    color: white;
+    font-weight: 600;
+    font-size: 25px;
+    font-family: helvetica;
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: center;
+    padding: 10px 0;
+}
+.home h1{
+  color: white;
+  text-align: center;
+  display: block;
+  font-size: 66px;
+  font-family: "playfair display";
+  width: 700px;
+  overflow-wrap: break-word;
+  padding-bottom: 10px;
+}
+.home p{
+  color: white;
+  text-align: center;
+  display: block;
+  font-family: lato;
+  font-size: 20px;
+  font-weight: 300;
+  overflow-wrap: break-word;
+  width: 700px;
+  line-height: 2;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 75vh;
+  width: 100%;
+  margin-inline: auto;
+}
+.container h3{
+  font-size: 17px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: Arial, sans-serif;
+  font-weight: 540;
+}
+.container h1{
+  padding-top: 20px;
+  font-family: 'playfair display';
+  font-size: 48px;
+  width: 700px;
+  overflow-wrap: break-word;
+  color: #B09A08;
+}
+.container .inner-content{
+  display: flex; 
+  font-family: lato;
+  color: rgb(102, 108, 119);
+  padding-top: 70px;
+}
+
+.container .inner-content p:first-child{
+  padding-right:90px ;
+}
+.container p{
+  float: left;
+  width: 600px;
+  overflow-wrap: break-word;
+}
+.image{
+  position: relative;
+  height: 90vh;
+  background: url('https://img.pagecloud.com/KOm-w4J2svthj_4uhRxIlbB94eA=/2100x0/filters:no_upscale()/classic-temp4/images/image-d64bf.jpeg') no-repeat;
+  background-size: cover;
+  display: flex;
+  padding: 250px;
+  align-items: center;
+}
+.image::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  backdrop-filter: brightness(0.5);
+}
+.image .content {
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+.image .content h1{
+  font-size: 17px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: Arial, sans-serif;
+  font-weight: 540;
+  padding-bottom: 20px;
+}
+.image .content h2{
+  font-family: 'playfair display';
+  font-size: 70px;
+  width: 800px;
+  overflow-wrap: break-word;
+  padding-bottom: 20px;
+}
+.image .content button{
+  color: #B09A08;
+  text-transform: uppercase;
+  font-size: 16px;
+  padding: 1rem 1.5rem;
+  letter-spacing: 1px;
+}
+.image .content button:hover{
+  color: white;
+  background-color: #B09A08;
+}
+
+.fourth{
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  padding: 0 150px 0 100px;
+}
+.fourth .left h1{
+  font-size: 17px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: Arial, sans-serif;
+  font-weight: 540;
+  padding-bottom: 20px;
+  color: #B09A08;
+}
+.fourth .left p{
+  font-family: 'playfair display';
+  font-size: 60px;
+  font-weight: 500;
+  overflow-wrap: break-word;
+  width: 500px;
+}
+.fourth .right p{
+  color:#666C77;
+  font-weight: 500;
+  padding-bottom: 20px;
+  padding-left: 200px;
+  line-height: 1.2;
+}
+.last{
+  height: 70vh;
+  background: url("https://img.pagecloud.com/w7vuY6y4fZ9sZkbpl9ME-esgKnI=/2100x0/filters:no_upscale()/classic-temp4/images/image-t87ad.jpeg") no-repeat;
+  background-size: cover;
+  position: relative;
+  background-position: center center;
+}
+.last::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  backdrop-filter: brightness(0.5) ;
+}
+.last p{
+  z-index: 2;
+  color: white;
+  font-family: 'playfair display';
+  font-size: 60px;
+  font-weight: 500;
+  overflow-wrap: break-word;
+  width: 700px;
+  text-align: center;
+  height: 50px;
+  margin: auto;     
+  position: absolute;
+  inset: 0;
+}
+.last p::after{
+    content: "";
+    position: absolute;
+    left: 45%; 
+    right: 50%; 
+    bottom: -100px; 
+    height: 2px; 
+    width: 10%;
+    background-color: #B09A08; 
+}
+footer{
+  min-height: 50vh;
+  background-color: #242424;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.footer a{
+  color: white;
+}
+footer .nav-item{
+  padding-top: 30px;
+}
+footer .icon{
+  padding-top: 30px;
+  display: flex;
+  width: 300px;
+  padding-left: 150px;
+  justify-content: space-around;
+  align-items: center;
+}
+.section-5{
+    height: 1300px;
+    background-color: #f0f0f0;
+    padding: 100px 211px;
+}
+.container-5{
+    display: grid;
+    width: 1080px;
+    height: 1080px;
+    grid-template-rows: 0.5fr 0.5fr;
+    grid-template-columns: 0.5fr 0.5fr;
+}
+.container-5-image{
+    width:540px;
+    height: 540px;
+}
+.container-5> div{
+    width: 540px;
+    height: 540px;
+    background-color: white;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.wine-tastings-text{
+    align-items: center;
+    text-align: center;
+}
+.wine-tastings-text>.p1{
+    width: 286px;
+    height: 21px;
+    margin-bottom: 10px;
+    color: #b09a08;
+    letter-spacing: 3px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.wine-tastings-text>h2{
+    margin-bottom: 10px;
+    font-size: 42px;
+    font-weight: 600;
+    font-family: "playfair display", serif;
+}
+.wine-tastings-text>.p2{
+    margin-bottom: 30px;
+    line-height: 1.8;
+    font-size: 14px;
+    color: #666c77;
+    width: 286px;
+}
+#button-booking{
+    color: white;
+    background-color:#b09a08;
+    width: 183px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: "Lato",serif;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+#button-booking:hover{
+  color:black;
+  background-color: #d5cd9a;
+}
+#events>p{
+    font-size: 14px;
+    color: #b09a08;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: 3px;
+}
+#events>h2{
+    margin: 10px 0 40px;
+    font-size: 36px;
+    font-weight: 600;
+    font-family: "Playfair display";
+}
+.events-name{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    gap: 30px;
+}
+.event-images{
+    height: 80px;
+    width: 118px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.event-images-1{
+    background-image: url("https://img.pagecloud.com/BGauk6MgNTxuKhcVZvxtBqpiVBA=/861x0:4036x3264/118x0/filters:no_upscale()/classic-temp4/images/image-t7ec7.jpeg");
+}
+.event-images-2{
+    background-image: url("https://img.pagecloud.com/Y2B8GOL0DYZrCXMiCGp8jI_jsI8=/703x0:3292x6016/118x0/filters:no_upscale()/classic-temp4/images/melissa-walker-horn-vQl48Dcl6No-unsplash-ec8cc.jpg");
+}
+.event-information{
+    width: 272px;
+}
+.event-information>h3{
+    font-size: 22px;
+    font-family: "Playfair display";
+    font-weight: 600;
+    color: #242424;
+}
+.event-information>p{
+    font-size: 14px;
+    color: #666c77;
+    line-height: 1.8;
+}
